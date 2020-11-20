@@ -1,13 +1,13 @@
 <template>
-  <nav class="flex justify-between bg-transparent font-semibold ">
+  <nav class="flex justify-between bg-transparent font-semibold text-xl text-primary">
     <div class=" ">
     <a href="#" class="ml-24 absolute z-1000 text-white text-2xl">EaglePro</a>
     </div>
     <div class="flex justify-end z-1000 " >
-      <div class="grid grid-cols-3 gap-3 ">
-        <a href="#" class="hover:text-primary">About</a>
-        <a href="#" class="hover:text-primary">Services</a>
-        <a href="#" class="hover:text-primary">Process</a>
+      <div class="grid grid-cols-3 gap-4 ">
+        <a href="#" class="hover:text-black ml-5">About</a>
+        <a href="#" class="hover:text-black">Services</a>
+        <a href="#" class="hover:text-black">Process</a>
       </div>
       <div class="ml-5">
         <a href="#"
