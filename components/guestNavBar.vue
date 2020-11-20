@@ -5,7 +5,7 @@
     </div>
     <div class="flex justify-end z-1000 " >
       <div class="grid grid-cols-3 gap-3 ">
-        <a href="#" class="text-base hover:text-primary">About</a>
+        <a href="#" class="hover:text-primary">About</a>
         <a href="#" class="hover:text-primary">Services</a>
         <a href="#" class="hover:text-primary">Process</a>
       </div>
