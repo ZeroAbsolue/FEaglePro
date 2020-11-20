@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#project_desc {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  z-index: 50;
+}
+
+#header_desc {
+  width: 85%;
+  height: auto;
+}
+
+#project_desc_img{
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 35%;
+}
+
+.z-1000{
+  z-index: 10000;
+}
+.btn {
+  @apply rounded-full px-3 py-2
+}
