@@ -1,8 +1,8 @@
 <template>
-  <div class="m-5 ">
-    <guest-nav-bar class=""></guest-nav-bar>
+  <div class="">
+    <guest-nav-bar class="m-5"></guest-nav-bar>
 
-    <div class="flex justify-between ">
+    <section class="flex justify-between items-end mbp-50">
       <div>
         <div class="absolute top-0 left-0" >
           <img  src="~/assets/img/header_desc.png" alt="desc" id="header_desc" >
@@ -41,7 +41,27 @@
       <div>
         <img data-aos="fade-left" data-aos-duration="1000"  src="~/assets/img/project_desc_img.png" alt="desc" id="project_desc_img" >
       </div>
-    </div>
+    </section>
+    <section class="mt-64" id="about">
+      <div class="flex justify-end mb-5">
+        <div>
+          <div class="text-primary text-4xl ml-24">
+            About
+          </div>
+          <img  src="~/assets/img/section_started.png" height="350" width="350" alt="desc" id="section_started" >
+        </div>
+
+      </div>
+      <div class="grid grid-cols-2 bg-primary ">
+        <div class="px-10 py-5" data-aos="fade-right" data-aos-duration="1000">
+          <img  src="~/assets/img/about_img.png" alt="desc" class="about_img" >
+        </div>
+        <div class="py-10 text-white mx-20" data-aos="fade-left" data-aos-duration="1000">
+          <p class="font-bold text-justify">Notre mission est de vous permettre d'apprécier le produit que vous désirez obtenir le plus rapidement possible tout en respectant coût, délais et objectifs.Nous aimons apprendre, collaborer, et créer de la valeur.</p><br>
+          <p class="font-semibold opacity-75 text-justify">Nous mettons à votre disposition les compétences pratiques acquises à travers nos différentes expériences professionnelles pour la réussite de vos projets. Nous utilisons les technologies et outils les plus éprouvées et les plus à jour pour réaliser vos projets de façon sécurisés et vous les rendre accessibles dès le début de notre échange. Nous vous apportons de manière concrète conseils, orientations et formations de qualité dans le processus de mise en place, refonte d'une plateforme mobile,web ou d'une infrastructure réseau pour vous ou votre entreprise. <br/><br/>Plus aucune raison de remettre à demain le projet de notoriété et/ou de visibilité de vos activités sur le web. Terminé le non respect des besoins exprimés.</p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
