@@ -7,8 +7,8 @@
       <div class="flex justify-end z-1000 " >
         <div class="grid grid-cols-3 gap-4">
           <a href="#about" class="hover:text-black ml-5">About</a>
-          <a href="#" class="hover:text-black">Services</a>
-          <a href="#" class="hover:text-black ">Process</a>
+          <a href="#services" class="hover:text-black">Services</a>
+          <a href="#process" class="hover:text-black ">Process</a>
         </div>
         <div class="flex-shrink-0">
           <a href="#"
