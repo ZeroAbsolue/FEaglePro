@@ -3,7 +3,7 @@
     <head-section-right :title="`Process`"></head-section-right>
     <div data-aos="fade-right" data-aos-duration="1000">
       <div >
-        <p class="text-center font-semibold opacity-75">
+        <p class="text-center font-semibold opacity-75 mb-5">
           <span>La satisfaction nait de la réalisation de l'idée exprimée dans le respect des</span><br>
           <span>contraintes projets (côuts, delais, qualité ) et de la valeur ajouté apporté</span>
         </p>

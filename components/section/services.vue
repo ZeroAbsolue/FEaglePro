@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-32" id="services">
+  <section class="mt-12" id="services">
     <head-section-left :title="`Services`"></head-section-left>
     <div class="flex justify-center" data-aos="fade-left" data-aos-duration="1000">
       <img src="~/assets/img/services.png" height="250" width="250" alt="services" >
