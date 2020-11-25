@@ -24,8 +24,9 @@
 .z-1000{
   z-index: 10000;
 }
+
 .btn {
-  @apply rounded-full px-3 py-2
+  @apply rounded-full px-3 py-2;
 }
 
 .mbp-50 {
@@ -45,4 +46,6 @@
 .text-align-last-center{
   text-align-last: center;
 }
+
+
 

@@ -1,0 +1,62 @@
+<template>
+  <section class="mt-12  bg-white" id="contact">
+    <head-section-left :title="`Contact`"></head-section-left>
+    <div class="grid grid-cols-2 justify-between mt-5 bg-primary">
+      <div class="bg-primary text-white text-center font-semibold mx-10 px-8">
+        <div class="text-3xl ">Get in touch</div>
+        <div class="mb-2">
+          <p class="">Nous sommes disponible pour vous servir. Laissez un message, <br>"La valeur n'attend point le nombre des années" </p>
+        </div>
+        <div class="mb-2"><span>Cameroun, Douala <br/>Ndogpassi, Entrée lycée</span></div>
+        <div class="mb-2">
+          <span>(+237) 6 91 51 60 82 / 6 70 37 12 36</span>
+        </div >
+        <div class="mb-2">
+          <span>eaglepro@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="" style="background: #f0f0f0 ">
+        <div class="my-2 mx-5 flex gap-10 items-center">
+          <label for="first_name" class="block text-sm font-medium text-gray-700">Nom</label>
+          <input type="text" id="first_name" class="focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md"
+                 placeholder="Nom">
+        </div>
+        <div class="my-2 mx-5 flex gap-10 items-center">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" class=" focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                 placeholder="Email">
+        </div>
+
+        <div class="my-2 mx-5 flex gap-2 items-center">
+          <label for="telephone" class="block text-sm font-medium text-gray-700">Téléphone</label>
+          <input type="tel" id="telephone" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md "
+                 placeholder="Telephone">
+        </div>
+
+        <div class="my-2 mx-5 flex gap-5 items-center">
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" rows="3" class=" shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Votre mesage">
+            </textarea>
+        </div>
+
+        <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+          <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Save
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+name: "contact"
+}
+</script>
+
+<style scoped>
+
+</style>

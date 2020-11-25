@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-64 pt-3 mb-32" id="process">
+  <section class="mt-64 pt-3" id="process">
     <head-section-right :title="`Process`"></head-section-right>
     <div data-aos="fade-right" data-aos-duration="1000">
       <div >
@@ -12,7 +12,7 @@
         <img class="mt-2" src="~/assets/img/process_img.png"  alt="process" >
       </div>
     </div>
-    <div class="grid grid-cols-3 mx-10 gap-4" data-aos="fade-left" data-aos-duration="1000">
+    <div class="grid grid-cols-3 mx-10 gap-4  pb-32" data-aos="fade-left" data-aos-duration="1000">
       <div class="shadow-2xl">
         <div class="flex justify-center">
           <div class="flex justify-center rounded-full h-6 w-6  bg-primary text-white">1</div>

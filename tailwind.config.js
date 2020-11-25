@@ -19,10 +19,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0E4E68'
+        // primary:{
+        //   light: '#1C6D8E',
+        //   DEFAULT: '#0E4E68',
+        // },
+        'primary': '#0E4E68',
+        'primary-light': '#1C6D8E'
       }
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
