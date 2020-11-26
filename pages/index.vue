@@ -1,18 +1,20 @@
 <template>
   <div class="">
-    <guest-nav-bar class="m-5"></guest-nav-bar>
-    <custom-header></custom-header>
-    <about></about>
-    <services></services>
-    <process></process>
-    <contact></contact>
-    <custom-footer></custom-footer>
+    <main class="relative">
+      <guest-nav-bar class="my-5"></guest-nav-bar>
+      <custom-header class="mb-10"></custom-header>
+      <about></about>
+      <services></services>
+      <process></process>
+      <contact></contact>
+      <custom-footer></custom-footer>
+    </main>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import GuestNavBar from "~/components/guestNavBar.vue";
+import GuestNavBar from "~/layouts/guestNavBar.vue";
 import Service from "~/components/service.vue";
 import HeadSectionRight from "~/components/head-section/head-section-right.vue";
 import HeadSectionLeft from "~/components/head-section/head-section-left.vue";

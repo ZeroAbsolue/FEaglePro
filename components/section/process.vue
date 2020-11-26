@@ -1,6 +1,7 @@
 <template>
-  <section class="mt-64 pt-3" id="process">
+  <section class="mt-12 sm:mt-64 pt-3" id="process">
     <head-section-right :title="`Process`"></head-section-right>
+    <div class="">
     <div data-aos="fade-right" data-aos-duration="1000">
       <div >
         <p class="text-center font-semibold opacity-75 mb-5">
@@ -12,7 +13,7 @@
         <img class="mt-2" src="~/assets/img/process_img.png"  alt="process" >
       </div>
     </div>
-    <div class="grid grid-cols-3 mx-10 gap-4  pb-32" data-aos="fade-left" data-aos-duration="1000">
+    <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4  pb-32" data-aos="fade-left" data-aos-duration="1000">
       <div class="shadow-2xl">
         <div class="flex justify-center">
           <div class="flex justify-center rounded-full h-6 w-6  bg-primary text-white">1</div>
@@ -38,7 +39,7 @@
             attendues, les délais, les coûts</div>
         </div>
       </div>
-      <div class="shadow-2xl">
+      <div class="shadow-2xl md:col-start-1 md:col-end-3 lg:col-start-3 lg:col-end-4">
         <div class="flex justify-center">
           <div class="flex justify-center rounded-full h-6 w-6  bg-primary text-white">3</div>
         </div>
@@ -52,6 +53,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 </template>

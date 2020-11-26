@@ -1,24 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
 
-#project_desc {
-  position: absolute;
-  top: 35%;
-  left: 15%;
-  z-index: 50;
-}
 
-#header_desc {
-  width: 85%;
-  height: auto;
+#header_desc_img {
+  width: 100%;
 }
 
 #project_desc_img{
-  position: absolute;
-  top: 15%;
-  right: 10%;
-  width: 35%;
+  width: 80%;
 }
 
 .z-1000{
@@ -29,16 +20,17 @@
   @apply rounded-full px-3 py-2;
 }
 
-.mbp-50 {
-  margin-bottom: 50%;
+.mbp-80{
+  margin-bottom: 0%;
 }
 
-.about_img {
-  position: relative;
-  top: 5%;
-  left: 20%;
-  width: 70%;
-}
+/*.about_img {*/
+/*  position: relative;*/
+/*  top: 5%;*/
+/*  left: 20%;*/
+/*  width: 70%;*/
+/*}*/
+
 #about, #process{
   background-color: #f0f0f0;
 }
@@ -48,4 +40,21 @@
 }
 
 
+
+@media (min-width: 640px) {
+  .mbp-80{
+    margin-bottom:0%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
+}
 

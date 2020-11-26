@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-end mb-5">
+  <div class="flex justify-end mb-5 mx-0">
     <div data-aos="fade-left" data-aos-duration="1000">
       <div class="text-primary text-6xl ml-20">
         {{ title }}

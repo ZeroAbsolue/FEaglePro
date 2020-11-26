@@ -1,12 +1,12 @@
 <template>
-  <section class="mt-64 " id="about">
+  <section class="" id="about">
     <head-section-right :title="`About`"></head-section-right>
-    <div class="grid grid-cols-2  ">
+    <div class=" grid grid-cols-1 lg:grid-cols-2 content-start">
       <div class="px-10 py-5" data-aos="fade-right" data-aos-duration="1000">
-        <img  src="~/assets/img/about_img.png" alt="desc" class="about_img z-1000" >
+        <img  src="~/assets/img/about_img.png" alt="desc" class=" mx-auto about_img z-1000" >
       </div>
-      <div class="bg-primary border-2 mb-12 rounded-full" data-aos="fade-left" data-aos-duration="1000">
-        <div class="py-5 text-white mx-20 " >
+      <div class="bg-none sm:bg-primary border-0 sm:border-2 mb-12 sm:rounded-full mr-auto" data-aos="fade-left" data-aos-duration="1000">
+        <div class="px-5 sm:py-5 text-primary sm:text-white mx-auto sm:mx-20 " >
           <p class="mt-10 pt-6 font-bold ">Notre mission est de vous permettre d'apprécier le produit que vous désirez obtenir le plus rapidement possible tout en respectant coût, délais et objectifs.Nous aimons apprendre, collaborer, et créer de la valeur.</p><br>
           <p class="font-semibold opacity-75 text-justify pb-6 text-align-last-center">
             <!--              <span>Nous mettons à votre disposition les compétences pratiques acquises à travers nos différentes expériences professionnelles pour la réussite de vos projets.</span>-->
