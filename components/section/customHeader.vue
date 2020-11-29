@@ -9,7 +9,7 @@
           <p class="font-bold sm:font-mono text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl mx-auto pt-20 pb-12 sm:pb-0 sm:pt-30  md:pt-32 lg:pt-52 sm:mt-4 lg:mt-20 xl:pt-56 lg:mt-12 xl:mt-0">PROJECT TRACKING</p>
 
           <p class="w-2/3 sm:w-1/3 md:w-1/3  xl:w-1/3 mx-auto sm:ml-0 sm:mr-20 pb-12 sm:pb-0 text-justify font-semibold text-gray-400">
-            <span>Par ce que vous désirez consulter pas à pas  dès à présent l'évolution et la réalisation de votre projet.</span>
+            <span>Parce que vous désirez consulter pas à pas  dès à présent l'évolution et la réalisation de votre projet.</span>
             <span class="hidden lg:inline">Nous mettons à votre disposition des outils et ressources pour le suivi optimal des objectifs, couts, délais.</span>
           </p>
         </div>
