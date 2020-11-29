@@ -5,7 +5,7 @@
         <img  class="hidden sm:inline"  src="~/assets/img/header_desc.png" alt="desc">
       </div>
       <div class="text-white mx-auto sm:ml-5 sm:absolute sm:top-0 sm:left-0 text-center sm:text-left md:pl-5 lg:pl-2 xl:pl-5" id="project_desc">
-        <div >
+        <div class="z-1000">
           <p class="font-bold sm:font-mono text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-5xl mx-auto pt-20 pb-12 sm:pb-0 sm:pt-30  md:pt-32 lg:pt-52 sm:mt-4 lg:mt-20 xl:pt-56 lg:mt-12 xl:mt-0">PROJECT TRACKING</p>
 
           <p class="w-2/3 sm:w-1/3 md:w-1/3  xl:w-1/3 mx-auto sm:ml-0 sm:mr-20 pb-12 sm:pb-0 text-justify font-semibold text-gray-400">
