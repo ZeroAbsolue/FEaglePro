@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  nuxt:
+    build: ./
+    container_name: front-office-ealgePro
+    restart: always
+    ports:
+    - "3000:3000"
+    command:
+      "npm run start"
+
+  nginx:
+    image: nginx
+    container_name: nginx-front-office-ealgePro
+    ports:
+    - "80:80"
+    volumes:
+    - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - nuxt
+

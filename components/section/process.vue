@@ -1,7 +1,7 @@
 <template>
   <section class="mt-12 sm:mt-64 pt-3" id="process">
     <head-section-right :title="`Process`"></head-section-right>
-    <div class="">
+    <div class="px-4">
     <div data-aos="fade-right" data-aos-duration="1000">
       <div >
         <p class="text-center font-semibold opacity-75 mb-5">
