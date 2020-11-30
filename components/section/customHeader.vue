@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="bg-white h-full pt-5 sm:pt-16 md:pt-32">
-      <img class="mx-auto " data-aos="fade-left" data-aos-duration="1000"  src="~/assets/img/project_desc_img.png" alt="desc" id="project_desc_img" >
+      <img class="mx-auto " data-aos="fade-left" data-aos-duration="1000"  src="~/assets/img/project_desc_img.jpg" alt="desc" id="project_desc_img" >
     </div>
   </section>
 </template>

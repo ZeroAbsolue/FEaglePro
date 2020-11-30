@@ -2,12 +2,12 @@
   <section class="" id="about">
     <head-section-right :title="`About`"></head-section-right>
     <div class=" grid grid-cols-1 lg:grid-cols-2 content-start">
-      <div class="px-10 py-5" data-aos="fade-right" data-aos-duration="1000">
-        <img  src="~/assets/img/about_img.png" alt="desc" class=" mx-auto about_img z-1000" >
+      <div class="hidden sm:block px-10 py-5" data-aos="fade-right" data-aos-duration="1000">
+        <img  src="~/assets/img/about_img.png" alt="desc" class="w-3/6 h-auto  md:w-2/4 lg:w-11/12   mx-auto about_img z-1000" >
       </div>
       <div class="bg-none sm:bg-primary border-0 sm:border-2 mb-12 sm:rounded-full mr-auto" data-aos="fade-left" data-aos-duration="1000">
         <div class="px-5 sm:py-5 text-primary sm:text-white m-auto sm:mx-20 lg:p-0 xl:pt-8 2xl:pt-10" >
-          <p class="mt-10 pt-6 font-bold lg:pt-16 xl:pt-20">Notre mission est de vous permettre d'apprécier le produit que vous désirez obtenir le plus rapidement possible tout en respectant coût, délais et objectifs.
+          <p class="sm:mt-10 sm:pt-6 font-bold lg:pt-8 xl:pt-20">Notre mission est de vous permettre d'apprécier le produit que vous désirez obtenir le plus rapidement possible tout en respectant coût, délais et objectifs.
           </p><br>
           <div class="m-auto">
             <p class="font-semibold opacity-75 text-justify pb-6 text-align-last-center ">
