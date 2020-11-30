@@ -6,6 +6,4 @@ RUN mkdir ${APP_ROOT}
 WORKDIR ${APP_ROOT}
 ADD . ${APP_ROOT}
 
-RUN yarn install
-
-CMD ["yarn","dev"]
+EXPOSE 3000
