@@ -6,9 +6,6 @@ RUN mkdir ${APP_ROOT}
 WORKDIR ${APP_ROOT}
 ADD . ${APP_ROOT}
 
-#RUN npm install
-RUN npm run dev
+RUN yarn install
 
-EXPOSE 3000
-
-ENV HOST 0.0.0.0
+CMD ["yarn","dev"]

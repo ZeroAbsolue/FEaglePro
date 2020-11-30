@@ -2,21 +2,25 @@ version: "3"
 
 services:
   nuxt:
-    build: ./
-    container_name: front-office-ealgePro
-    restart: always
+    container_name: nuxtJs
     ports:
     - "3000:3000"
-    command:
-      "npm run dev"
-
-  nginx:
-    image: nginx
-    container_name: nginx-front-office-ealgePro
-    ports:
-    - "80:80"
+    build:
+      context: ./
+      dockerfile: Dockerfile
     volumes:
-    - ./nginx:/etc/nginx/conf.d
-    depends_on:
-      - nuxt
+    - ./:/src
+    - /src/node_modules
+    - /src/.nuxt
+
+
+#  nginx:
+#    image: nginx
+#    container_name: nginx-front-office-ealgePro
+#    ports:
+#    - "8080:80"
+#    volumes:
+#    - ./nginx:/etc/nginx/conf.d
+#    depends_on:
+#      - node
 
