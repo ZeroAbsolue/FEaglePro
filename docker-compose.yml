@@ -1,27 +1,32 @@
 version: "3"
 
 services:
-    yarn:
-      build:
-        context: .
-        dockerfile: Dockerfile
-      container_name: yarn
+    nuxt:
+      image: node:14.15-alpine
+      command: yarn dev
       volumes:
         - ./:/src
       working_dir: /src
       ports:
-        - "3000:3000"
-      entrypoint: [ 'yarn' ]
+      - "3000:3000"
+      environment:
+        HOST: 0.0.0.0
+      networks:
+      - my_net
 
+    nginx:
+      image: nginx
+      container_name: nginx-front-office-ealgePro
+      ports:
+      - "80:80"
+      volumes:
+      - ./nginx:/etc/nginx/conf.d
+      depends_on:
+      - nuxt
+      networks:
+      - my_net
 
-
-#  nginx:
-#    image: nginx
-#    container_name: nginx-front-office-ealgePro
-#    ports:
-#    - "8080:80"
-#    volumes:
-#    - ./nginx:/etc/nginx/conf.d
-#    depends_on:
-#      - node
+networks:
+  my_net:
+    driver: bridge
 

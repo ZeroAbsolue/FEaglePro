@@ -12,7 +12,7 @@
           <div class="m-auto">
             <p class="font-semibold opacity-75 text-justify pb-6 text-align-last-center ">
               <span> Nous utilisons les technologies et outils les plus éprouvées et les plus récentes pour réaliser vos projets de façon sécurisés et vous les rendre accessibles dès le début de notre échange. </span>
-              <span class="">
+              <span class="hidden 2xl:inline">
                 Nous vous apportons de manière concrète conseils, orientations et formations de qualité dans le processus de mise en place, refonte d'une plateforme mobile,web ou d'une infrastructure réseau pour vous ou votre entreprise.</span>
               <span class="hidden 2xl:inline">
                <br/><br/>
