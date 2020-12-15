@@ -42,7 +42,7 @@
               <a href="#process" class="hover:text-black ">Process</a>
             </div>
             <div class="flex-shrink-0">
-              <a href="#"
+              <a href="#contact"
                  class="btn bg-primary hover:bg-white text-white hover:text-primary border-2 border-primary hover:bg-white">
                 Get started
               </a>
@@ -62,7 +62,7 @@
         <a href="#about" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white border-l-4  border-transparent hover:border-l-4 hover:border-white ">About</a>
         <a href="#services" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white  border-l-4 border-transparent hover:border-l-4 hover:border-white">Services</a>
         <a href="#process" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white  border-l-4 border-transparent hover:border-l-4 hover:border-white">Process</a>
-        <a href="#" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white border-l-4 border-transparent hover:border-l-4 hover:border-white">Get started</a>
+        <a href="#contact" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white border-l-4 border-transparent hover:border-l-4 hover:border-white">Get started</a>
       </div>
     </div>
 <!--    <div class="flex justify-between bg-transparent font-semibold text-xl text-primary">-->

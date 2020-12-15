@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "types": [
+      "@nuxt/types",
+      "nuxt-i18n",
+    ],
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",
