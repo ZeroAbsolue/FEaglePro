@@ -20,6 +20,8 @@
         </div>
 
         <div class="" style="background: #f0f0f0 ">
+           <mail-notification :notify.sync="showNotification"></mail-notification>
+
           <ValidationObserver ref="observer" v-slot="{ invalid , handleSubmit }">
             <ValidationProvider rules="required" v-slot="{ errors }" :name="$t('name')">
               <div class="my-2 mx-5 flex gap-10 items-center">
@@ -28,7 +30,7 @@
                         :class="`focus:ring-primary focus:border-primary block w-full sm:text-sm border rounded-md ${errors[0] ? 'border-red-500' :'border-gray-300'}`"
                         placeholder="Nom">
               </div>
-              <p class="px-24 font-medium tracking-wide text-red-500 text-xs ">{{ errors[0] }}</p>
+              <p class="px-6 sm:px-24 font-medium tracking-wide text-red-500 text-xs ">{{ errors[0] }}</p>
             </ValidationProvider>
 
             <ValidationProvider rules="required|email" v-slot="{ errors }" :name="$t('email')">
@@ -38,7 +40,7 @@
                        :class="`focus:ring-primary focus:border-primary block w-full sm:text-sm border rounded-md ${errors[0] ? 'border-red-500' :'border-gray-300'}`"
                        placeholder="Email">
               </div>
-              <p class="px-24 font-medium tracking-wide text-red-500 text-xs ">{{ errors[0] }}</p>
+              <p class="px-6 sm:px-24 font-medium tracking-wide text-red-500 text-xs ">{{ errors[0] }}</p>
             </ValidationProvider>
 
             <ValidationProvider rules="required|numeric|min:9" v-slot="{ errors }" :name="$t('phone')">
@@ -48,7 +50,7 @@
                        :class="`focus:ring-primary focus:border-primary block w-full sm:text-sm border rounded-md ${errors[0] ? 'border-red-500' :'border-gray-300'}`"
                        placeholder="Telephone">
               </div>
-              <p class="px-24 font-medium tracking-wide text-red-500 text-xs ">{{ errors[0] }}</p>
+              <p class="px-6 sm:px-24 font-medium tracking-wide text-red-500 text-xs ">{{ errors[0] }}</p>
             </ValidationProvider>
 
             <ValidationProvider rules="required" v-slot="{ errors }" :name="$t('message')">
@@ -59,13 +61,19 @@
                           placeholder="Votre mesage">
             </textarea>
               </div>
-              <p class="px-24 font-medium tracking-wide text-red-500 text-xs ">{{ errors[0] }}</p>
+              <p class="px-6 sm:px-24 font-medium tracking-wide text-red-500 text-xs ">{{ errors[0] }}</p>
             </ValidationProvider>
 
             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-              <button type="submit" @click="handleSubmit(onSubmit)" :class="`inline-flex justify-center py-2 px-4 border
-                       border-transparent  text-sm font-medium rounded-md text-white bg-primary
+              <button type="submit" @click="handleSubmit(onSubmit)" :class="`inline-flex justify-center py-2 px-4
+                        text-sm font-medium rounded-md text-white bg-primary
                        ${invalid ? 'opacity-50':'hover:bg-primary-light'}`" :disabled="invalid">
+                <span v-if="loading">
+                  <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                </span>
                 Save
               </button>
             </div>
@@ -79,15 +87,21 @@
 
 <script>
 import { ValidationProvider, ValidationObserver } from "vee-validate";
+import Mail from "~/components/Notification/mailNotification";
+import MailNotification from "~/components/Notification/mailNotification";
 
 export default {
   name: "contact",
   components: {
+    MailNotification,
+    Mail,
     ValidationProvider,
     ValidationObserver
   },
   data(){
     return {
+      loading:false,
+      showNotification:false,
       form:{
         nom:'',
         email:'',
@@ -100,13 +114,17 @@ export default {
 
   methods: {
     clearForm:function(){
-        this.form.nom = this.form.email = this.form.contenu = this.form.numero = '';
+      this.form.nom = this.form.email = this.form.contenu = this.form.numero = '';
     },
 
     async onSubmit(event) {
-      const url = 'https://colisxchange.com/api/send/message';
+      const url = 'http://127.0.0.1:8000/api/send/message';
+      // const url = 'https://colisxchange.com/api/send/message';
       let data = this.form;
+      this.loading = true;
       await this.$axios.$post(url,data).then(res=>{
+        this.loading = false;
+        this.showNotification = true;
         this.clearForm();
         this.$refs.observer.reset();
       })

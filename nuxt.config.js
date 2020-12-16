@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+import webpack from 'webpack';
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -82,6 +82,13 @@ export default {
     transpile: [
       "vee-validate/dist/rules"
     ],
+    plugins: [
+      new webpack.ProvidePlugin({
+        // global modules
+        $: 'jquery',
+        _: 'lodash'
+      })
+    ]
   },
 
   server: {
