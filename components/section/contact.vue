@@ -118,8 +118,8 @@ export default {
     },
 
     async onSubmit(event) {
-      const url = 'http://127.0.0.1:8000/api/send/message';
-      // const url = 'https://colisxchange.com/api/send/message';
+      // const url = 'http://127.0.0.1:8000/api/send/message';
+      const url = 'https://colisxchange.com/api/send/message';
       let data = this.form;
       this.loading = true;
       await this.$axios.$post(url,data).then(res=>{
