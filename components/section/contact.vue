@@ -20,7 +20,7 @@
         </div>
 
         <div class="" style="background: #f0f0f0 ">
-          <ValidationObserver v-slot="{ invalid , handleSubmit }">
+          <ValidationObserver ref="observer" v-slot="{ invalid , handleSubmit }">
             <ValidationProvider rules="required" v-slot="{ errors }" :name="$t('name')">
               <div class="my-2 mx-5 flex gap-10 items-center">
                 <label  for="name" class=" hidden sm:block text-sm font-medium text-gray-700">Nom</label>
@@ -44,7 +44,7 @@
             <ValidationProvider rules="required|numeric|min:9" v-slot="{ errors }" :name="$t('phone')">
               <div class="my-2 mx-5 flex gap-2 items-center">
                 <label for="telephone" class="hidden sm:block text-sm font-medium text-gray-700">Téléphone</label>
-                <input v-model="form.telephone" type="tel" id="telephone"
+                <input v-model="form.numero" type="tel" id="telephone"
                        :class="`focus:ring-primary focus:border-primary block w-full sm:text-sm border rounded-md ${errors[0] ? 'border-red-500' :'border-gray-300'}`"
                        placeholder="Telephone">
               </div>
@@ -54,7 +54,7 @@
             <ValidationProvider rules="required" v-slot="{ errors }" :name="$t('message')">
               <div class="my-2 mx-5 flex gap-5 items-center">
                 <label for="message" class="hidden sm:block text-sm font-medium text-gray-700">Message</label>
-                <textarea v-model="form.message" id="message" rows="3"
+                <textarea v-model="form.contenu" id="message" rows="3"
                           :class="`shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border rounded-md ${errors[0] ? 'border-red-500' :'border-gray-300'}`"
                           placeholder="Votre mesage">
             </textarea>
@@ -79,7 +79,6 @@
 
 <script>
 import { ValidationProvider, ValidationObserver } from "vee-validate";
-import nodemailer from 'nodemailer';
 
 export default {
   name: "contact",
@@ -92,15 +91,26 @@ export default {
       form:{
         nom:'',
         email:'',
-        telephone:'',
-        message:'',
+        numero:'',
+        contenu:'',
+        sujet:'EAGLEPRO MESSAGE'
       }
     }
   },
 
   methods: {
-    onSubmit() {
-      this.main().catch(console.error);
+    clearForm:function(){
+        this.form.nom = this.form.email = this.form.contenu = this.form.numero = '';
+    },
+
+    async onSubmit(event) {
+      const url = 'https://colisxchange.com/api/send/message';
+      let data = this.form;
+      await this.$axios.$post(url,data).then(res=>{
+        this.clearForm();
+        this.$refs.observer.reset();
+      })
+
     },
   }
 }

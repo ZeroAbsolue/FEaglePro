@@ -28,7 +28,8 @@ export default {
   plugins: [
     { src: "~/plugins/aos.client", ssr: false },
     { src: "~/plugins/vee-validate.client.js", ssr: false },
-    { src: '~/plugins/i18n.js' }
+    { src: '~/plugins/i18n.js' },
+    { src:'~/plugins/axios'}
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -46,6 +47,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'nuxt-i18n',
+    '@nuxtjs/axios'
   ],
 
   i18n:  {
