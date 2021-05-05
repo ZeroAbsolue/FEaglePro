@@ -1,16 +1,15 @@
-FROM node:14.15-alpine
-
-ENV APP_ROOT /src
-
-RUN mkdir ${APP_ROOT}
-WORKDIR ${APP_ROOT}
-ADD . ${APP_ROOT}
-
-RUN yarn install
-
-EXPOSE 3000
-
-ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=3000
-
-CMD ["yarn","dev"]
+FROM node:lts-alpine
+# install simple http server for serving static content
+RUN npm install -g http-server
+# make the app folder the current working directory
+WORKDIR /app
+# copy both package.json and package-lock.json
+COPY package*.json ./
+# install project dependencies
+RUN npm install
+# copy project files and folders to the current working directory (i.e. app folder)
+COPY . .
+# build app for production with minification
+RUN npm run generate
+EXPOSE 8080
+CMD [ "http-server", "dist" ]
