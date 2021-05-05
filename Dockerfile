@@ -9,6 +9,6 @@ ADD . ${APP_ROOT}
 #RUN npm install
 RUN npm run dev
 
-EXPOSE 3000
+EXPOSE 80
 
 ENV HOST 0.0.0.0
