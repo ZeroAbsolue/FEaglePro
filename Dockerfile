@@ -18,9 +18,9 @@ RUN npm run generate
 EXPOSE 80
 
 # set app serving to permissive / assigned
-ENV NUXT_HOST=0.0.0.0
+ENV HOST=0.0.0.0
 # set app port
-ENV NUXT_PORT=80
+ENV PORT=80
 
 # start the app
 CMD [ "npm", "start" ]
