@@ -14,12 +14,12 @@ RUN npm run build
 RUN npm run generate
 
 # expose 80 on container
-EXPOSE 80
+EXPOSE 8000
 
 # set app serving to permissive / assigned
-ENV NUXT_HOST=0.0.0.0
+ENV HOST=0.0.0.0
 # set app port
-ENV NUXT_PORT=80
+ENV PORT=8000
 
 # start the app
 CMD [ "npm", "start" ]
