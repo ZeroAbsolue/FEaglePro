@@ -14,12 +14,13 @@ RUN npm run build
 RUN npm run generate
 
 # expose 80 on container
-EXPOSE 8000
+EXPOSE 80
 
 # set app serving to permissive / assigned
 ENV HOST=0.0.0.0
+
 # set app port
-ENV PORT=8000
+ENV PORT=80
 
 # start the app
 CMD [ "npm", "start" ]
