@@ -8,7 +8,7 @@ services:
     ports:
     - "3000:3000"
     command:
-      "npm run dev"
+      "npm run start"
 
   nginx:
     image: nginx
