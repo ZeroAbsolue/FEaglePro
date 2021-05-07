@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+import webpack from 'webpack';
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -26,7 +26,10 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: "~/plugins/aos.client", ssr: false }
+    { src: "~/plugins/aos.client", ssr: false },
+    { src: "~/plugins/vee-validate.client.js", ssr: false },
+    { src: '~/plugins/i18n.js' },
+    { src:'~/plugins/axios'}
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -43,16 +46,62 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    'nuxt-i18n',
+    '@nuxtjs/axios'
   ],
 
+  i18n:  {
+    lazy: true,
+    loadLanguagesAsync: true,
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
+    fallbackLocale:'en',
+    locales: [
+      {
+        code: 'fr',
+        iso:  'fr-FR',
+        name: 'Français',
+        file: 'fr.js'
+      },
+      {
+        code: 'en',
+        iso:  'en-US',
+        name: 'English',
+        file: 'en.js'
+      },
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true,  // recommended
+    },
+    langDir: 'lang/',
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    transpile: [
+      "vee-validate/dist/rules"
+    ],
+    plugins: [
+      new webpack.ProvidePlugin({
+        // global modules
+        $: 'jquery',
+        _: 'lodash'
+      })
+    ]
   },
 
   server: {
     port: 3000, // default: 3000
     host: '0.0.0.0' // default: localhost
-  }
+  },
+
+  watchers: {
+    webpack: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
+  },
 
 
 }

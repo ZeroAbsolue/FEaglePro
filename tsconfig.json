@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "types": [
+      "@nuxt/types",
+      "nuxt-i18n",
+      "@nuxtjs/axios"
+    ],
     "target": "ES2018",
     "module": "ESNext",
     "moduleResolution": "Node",

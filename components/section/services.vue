@@ -3,7 +3,7 @@
     <head-section-left :title="`Services`"></head-section-left>
     <div class="">
       <div class="flex justify-center" data-aos="fade-left" data-aos-duration="1000">
-        <img src="~/assets/img/services.png" height="250" width="250" alt="services" >
+        <img class="w-32 h-32 sm:w-1/6 sm:h-auto" src="~/assets/img/services.jpg" height="250" width="250" alt="services" >
       </div>
       <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 mx-2 sm:mx-10 mt-2 mb-5 sm:mb-12">
         <service :title="`REDACTION DE CAHIER DE CHARGES <br> (CDC)`"

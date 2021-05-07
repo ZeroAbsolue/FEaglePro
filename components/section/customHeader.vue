@@ -15,7 +15,7 @@
         </div>
         <div class="inline-flex items-center font-semibold pb-8 sm:pt-2 md:pt-6">
           <div class="text-white text-2xl sm:text-base  lg:text-2xl rounded-full border-2 border-white px-4 py-1">
-            <a href="#">Get started</a>
+            <a href="#contact">Get started</a>
           </div>
           <div class="text-white px-5">
             <svg class="w-12 h-12 sm:w-10 sm:h-10 md:w-12 md:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="bg-white h-full pt-5 sm:pt-16 md:pt-32">
-      <img class="mx-auto " data-aos="fade-left" data-aos-duration="1000"  src="~/assets/img/project_desc_img.png" alt="desc" id="project_desc_img" >
+      <img class="mx-auto " data-aos="fade-left" data-aos-duration="1000"  src="~/assets/img/project_desc_img.jpg" alt="desc" id="project_desc_img" >
     </div>
   </section>
 </template>

@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="flex justify-center mb-5">
-        <img class="mt-2" src="~/assets/img/process_img.png"  alt="process" >
+        <img class="mt-2" src="~/assets/img/process_img.jpg"  alt="process" >
       </div>
     </div>
     <div class="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4  pb-32" data-aos="fade-left" data-aos-duration="1000">

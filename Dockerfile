@@ -24,4 +24,3 @@ ENV PORT=80
 
 # start the app
 CMD [ "npm", "start" ]
-

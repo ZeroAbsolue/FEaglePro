@@ -28,7 +28,7 @@
           </button>
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex-shrink-0 flex items-center text-primary sm:text-white">
+          <div class="flex-shrink-0 flex items-center  hidden sm:block sm:text-white">
             EaglePro
 <!--            <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">-->
 <!--            <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow">-->
@@ -42,7 +42,7 @@
               <a href="#process" class="hover:text-black ">Process</a>
             </div>
             <div class="flex-shrink-0">
-              <a href="#"
+              <a href="#contact"
                  class="btn bg-primary hover:bg-white text-white hover:text-primary border-2 border-primary hover:bg-white">
                 Get started
               </a>
@@ -57,12 +57,12 @@
 
       Menu open: "block", Menu closed: "hidden"
     -->
-    <div :class="`${activeHamburgerMenu ? 'block' : 'hidden '} sm:hidden`">
-      <div class="px-2 pb-3 space-y-1" @click="toggleActiveHamburgerMenu">
-        <a href="#about" class="block px-2 py-2  text-base font-medium text-white border-l-2 border-transparent hover:border-l-2 hover:border-white ">About</a>
-        <a href="#services" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white  border-l-2 border-transparent hover:border-l-2 hover:border-white">Services</a>
-        <a href="#process" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white  border-l-2 border-transparent hover:border-l-2 hover:border-white">Process</a>
-        <a href="#" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white border-l-2 border-transparent hover:border-l-2 hover:border-white">Get started</a>
+    <div :class="`${activeHamburgerMenu ? 'block' : 'hidden '} sm:hidden bg-primary-light`">
+      <div class="pb-3 space-y-1" @click="toggleActiveHamburgerMenu">
+        <a href="#about" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white border-l-4  border-transparent hover:border-l-4 hover:border-white ">About</a>
+        <a href="#services" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white  border-l-4 border-transparent hover:border-l-4 hover:border-white">Services</a>
+        <a href="#process" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white  border-l-4 border-transparent hover:border-l-4 hover:border-white">Process</a>
+        <a href="#contact" class="block px-2 py-2  text-base font-medium text-gray-300 hover:text-white border-l-4 border-transparent hover:border-l-4 hover:border-white">Get started</a>
       </div>
     </div>
 <!--    <div class="flex justify-between bg-transparent font-semibold text-xl text-primary">-->
