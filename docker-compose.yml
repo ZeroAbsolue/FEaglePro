@@ -14,7 +14,7 @@ services:
     image: nginx
     container_name: nginx-front-office-ealgePro
     ports:
-    - "80:80"
+    - "82:82"
     - "443:443"
     volumes:
     - ./nginx:/etc/nginx/conf.d

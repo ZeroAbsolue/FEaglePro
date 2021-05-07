@@ -1,4 +1,3 @@
-
 FROM node:14.15-alpine
 
 # create destination directory
@@ -19,6 +18,7 @@ EXPOSE 80
 
 # set app serving to permissive / assigned
 ENV HOST=0.0.0.0
+
 # set app port
 ENV PORT=80
 
