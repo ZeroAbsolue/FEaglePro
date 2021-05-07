@@ -3,6 +3,8 @@
 ## Build Setup with docker in development
 ```
 docker-compose build && docker-compose up -d
+Ensuite lancer l'url localhost:82
+
 ```
 
 ## Build Setup with docker in production
@@ -25,11 +27,13 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+Ensuite lancer l'url localhost:3000
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-#PRODUCTION
+##PRODUCTION
 
 ```
 Nous nous sommes rendus compte que pour deployer en production, le port sur lequel on doit
