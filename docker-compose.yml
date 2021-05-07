@@ -1,32 +1,22 @@
 version: "3"
 
 services:
-    nuxt:
-      image: node:14.15-alpine
-      command: yarn dev
-      volumes:
-        - ./:/src
-      working_dir: /src
-      ports:
-      - "3000:3000"
-      environment:
-        HOST: 0.0.0.0
-      networks:
-      - my_net
+  nuxt:
+    build: ./
+    container_name: front-office-ealgePro
+    restart: always
+    ports:
+    - "3000:3000"
+    command:
+      "npm run dev"
 
-    nginx:
-      image: nginx
-      container_name: nginx-front-office-ealgePro
-      ports:
-      - "80:80"
-      volumes:
-      - ./nginx:/etc/nginx/conf.d
-      depends_on:
+  nginx:
+    image: nginx
+    container_name: nginx-front-office-ealgePro
+    ports:
+    - "80:80"
+    - "443:443"
+    volumes:
+    - ./nginx:/etc/nginx/conf.d
+    depends_on:
       - nuxt
-      networks:
-      - my_net
-
-networks:
-  my_net:
-    driver: bridge
-

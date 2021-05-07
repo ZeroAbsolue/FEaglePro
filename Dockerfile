@@ -1,16 +1,26 @@
+
 FROM node:14.15-alpine
 
-ENV APP_ROOT /src
+# create destination directory
+RUN mkdir -p /usr/src/nuxt-app
+WORKDIR /usr/src/nuxt-app
 
-RUN mkdir ${APP_ROOT}
-WORKDIR ${APP_ROOT}
-ADD . ${APP_ROOT}
+# copy the app, note .dockerignore
+COPY . /usr/src/nuxt-app/
+RUN npm install
 
-RUN yarn install
+# build necessary, even if no static files are needed,
+# since it builds the server as well
+RUN npm run build
+RUN npm run generate
 
-EXPOSE 3000
+# expose 80 on container
+EXPOSE 80
 
-ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=3000
+# set app serving to permissive / assigned
+ENV HOST=0.0.0.0
+# set app port
+ENV PORT=80
 
-CMD ["yarn","dev"]
+# start the app
+CMD [ "npm", "start" ]
