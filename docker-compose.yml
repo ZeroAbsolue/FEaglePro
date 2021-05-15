@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 services:
   nuxt:
@@ -6,7 +6,7 @@ services:
     container_name: front-office-ealgePro
     restart: always
     ports:
-    - "3000:3000"
+      - "3000:3000"
     command:
       "npm run start"
 
@@ -14,12 +14,12 @@ services:
     image: nginx
     container_name: nginx-front-office-ealgePro
     ports:
-    - "80:80"
-    - "443:443"
+      - "80:80"
+      - "443:443"
     volumes:
-    - ./nginx:/etc/nginx/conf.d
-    - certbot-etc:/etc/letsencrypt
-    - certbot-var:/var/lib/letsencrypt
+      - ./nginx:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
     depends_on:
       - nuxt
     networks:
@@ -46,6 +46,6 @@ volumes:
         device: /home/ubuntu/var/www/html/Feaglepro/
         o: bind
 
- networks:
-    nuxt-network:
-      driver: bridge
+networks:
+  nuxt-network:
+    driver: bridge
