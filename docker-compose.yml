@@ -1,8 +1,5 @@
 version: "3"
 
-networks:
-  nuxt-network:
-
 services:
   nuxt:
     build: ./
@@ -39,7 +36,7 @@ services:
       - nuxt
     command: certonly --webroot --webroot-path=/usr/src/nuxt-app --email nkouekamwilfried@gmail.com --agree-tos --no-eff-email --staging -d colisxchange.com  -d www.colisxchange.com
 
-  volumes:
+volumes:
     certbot-etc:
     certbot-var:
     web-root:
@@ -49,6 +46,6 @@ services:
         device: /home/ubuntu/var/www/html/Feaglepro/
         o: bind
 
-  networks:
+ networks:
     nuxt-network:
       driver: bridge
