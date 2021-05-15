@@ -43,7 +43,7 @@ volumes:
       driver: local
       driver_opts:
         type: none
-        device: /home/ubuntu/var/www/html/Feaglepro/
+        device: var/www/html/Feaglepro/
         o: bind
 
 networks:
