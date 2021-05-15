@@ -1,5 +1,8 @@
 version: "3"
 
+networks:
+  nuxt-network:
+
 services:
   nuxt:
     build: ./
@@ -8,15 +11,44 @@ services:
     ports:
     - "3000:3000"
     command:
-      "npm run dev"
+      "npm run start"
 
   nginx:
     image: nginx
     container_name: nginx-front-office-ealgePro
     ports:
-    - "82:82"
+    - "80:80"
     - "443:443"
     volumes:
     - ./nginx:/etc/nginx/conf.d
+    - certbot-etc:/etc/letsencrypt
+    - certbot-var:/var/lib/letsencrypt
     depends_on:
       - nuxt
+    networks:
+      - nuxt-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/usr/src/nuxt-app
+    depends_on:
+      - nuxt
+    command: certonly --webroot --webroot-path=/usr/src/nuxt-app --email nkouekamwilfried@gmail.com --agree-tos --no-eff-email --staging -d colisxchange.com  -d www.colisxchange.com
+
+  volumes:
+    certbot-etc:
+    certbot-var:
+    web-root:
+      driver: local
+      driver_opts:
+        type: none
+        device: /home/ubuntu/var/www/html/Feaglepro/
+        o: bind
+
+  networks:
+    nuxt-network:
+      driver: bridge
